@@ -35,6 +35,11 @@ the confirmation banner, and both beach recommendations with their images.
 
 [Open it here](screenshots/task6-search-beach.png)
 
+`screenshots/task7-search-temple.png` — the same view with "temple" typed in,
+showing both temple recommendations with their images.
+
+[Open it here](screenshots/task7-search-temple.png)
+
 ## Layout
 
 ```
