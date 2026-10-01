@@ -296,6 +296,16 @@ select:focus, input:focus, textarea:focus{ outline:3px solid #ffd98a; outline-of
 
 .prose{ max-width:78ch; }
 .prose h2{ margin-top:2rem; }
+.prose h3{ margin-top:1.5rem; font-size:1.08rem; }
+
+.prose code{
+  background:#e8f2f5;
+  padding:.12rem .4rem;
+  border-radius:5px;
+  font-family:"SF Mono",Menlo,Consolas,monospace;
+  font-size:.9em;
+  border:1px solid #d3e2e8;
+}
 
 .about-grid{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.3fr); gap:1.5rem; align-items:center; }
 .about-grid img{ border-radius:var(--radius); width:100%; }

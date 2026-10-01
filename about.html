@@ -103,6 +103,70 @@
           lets you send, so you do not lose a long message to a typo.</li>
     </ol>
 
+    <h2>Guidance for team members</h2>
+    <p>Everything a new person needs to work on this site without asking anyone.</p>
+
+    <h3>Where things live</h3>
+    <table class="tech-table">
+      <tr><th>index.html</th><td>Home page — introduction, preference finder, and the three recommendation sections</td></tr>
+      <tr><th>about.html</th><td>This page</td></tr>
+      <tr><th>contact.html</th><td>The contact form</td></tr>
+      <tr><th>css/styles.css</th><td>All styling. Colours and spacing use the variables at the top of the file</td></tr>
+      <tr><th>js/main.js</th><td>All behaviour, in five clearly labelled sections</td></tr>
+      <tr><th>images/</th><td>16 SVG illustrations, named after the destination</td></tr>
+    </table>
+
+    <h3>Running it locally</h3>
+    <p>Open <code>index.html</code> directly in a browser, or serve the folder so
+       relative paths behave:</p>
+    <p><code>python3 -m http.server 8000</code></p>
+    <p>Then open <code>http://localhost:8000</code>. There is nothing to install
+       and nothing to compile.</p>
+
+    <h3>Adding a new destination</h3>
+    <ol class="steps">
+      <li>Add the SVG to <code>images/</code>, named in lowercase with hyphens —
+          <code>images/kenya-lamu.svg</code>.</li>
+      <li>For a beach or temple card, copy an existing <code>&lt;article class="card"&gt;</code>
+          block in <code>index.html</code> and change its image, heading, text and
+          <code>data-category</code>. The card must keep that attribute or the
+          preference filter will ignore it.</li>
+      <li>For a country, add an entry to the <code>COUNTRIES</code> object in
+          <code>js/main.js</code>. Give it a <code>blurb</code> and a
+          <code>places</code> array holding two objects, each with <code>title</code>,
+          <code>img</code> and <code>note</code>.</li>
+      <li>Add the <code>&lt;option&gt;</code> to <code>#countrySelect</code> in
+          <code>index.html</code>, using the same key as the <code>COUNTRIES</code>
+          entry.</li>
+    </ol>
+    <p><strong>Always write an honest note.</strong> Every destination on this site
+       states what is difficult about it — crowd size, season to avoid, currents,
+       worn carvings. Do not add a destination without one.</p>
+
+    <h3>House rules</h3>
+    <ul class="criteria">
+      <li><strong>No dependencies.</strong> Plain HTML, CSS and JavaScript only. Do not
+          add a framework or a <code>package.json</code>.</li>
+      <li><strong>No external images.</strong> Everything is a local SVG so the site
+          cannot break on someone else's network.</li>
+      <li><strong>Keep the navigation identical on all three pages.</strong> If you
+          add a link, add it everywhere.</li>
+      <li><strong>Every image needs alt text</strong> that describes the picture,
+          not the file name.</li>
+      <li><strong>Mark up semantically</strong> — one <code>&lt;h1&gt;</code> per page,
+          real headings in order.</li>
+      <li><strong>Comment the JavaScript.</strong> Each section carries a header
+          explaining what it does.</li>
+    </ul>
+
+    <h3>Before you submit</h3>
+    <ul class="criteria">
+      <li>Open all three pages and click every link — nothing should 404.</li>
+      <li>Submit with the <code>https://</code> prefix included, or the submission
+          breaks.</li>
+      <li>Test the live Pages URL in your own browser before handing it in.</li>
+    </ul>
+
     <h2>Technologies used</h2>
     <table class="tech-table">
       <tr><th>HTML5</th><td>Semantic page structure, accessibility labels, and one page per section</td></tr>
