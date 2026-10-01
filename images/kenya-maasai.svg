@@ -1,16 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="Maasai Mara, Kenya">
-<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1">
-<stop offset="0%" stop-color="#ffdca8"/><stop offset="100%" stop-color="#ff9d6e"/></linearGradient></defs>
-<rect width="800" height="500" fill="url(#s)"/>
-<circle cx="620" cy="130" r="62" fill="#fff6d5" opacity=".95"/>
-<path d="M0 360 L180 210 L330 360 Z" fill="#5b6b52"/>
-<path d="M300 360 L520 190 L740 360 Z" fill="#4c5c46"/>
-<rect y="360" width="800" height="140" fill="#4a7c2f"/>
-<path d="M620 360 q-16 -70 -14 -96" stroke="#4a3520" stroke-width="11" fill="none"/>
-<path d="M606 268 q-46 -26 -62 -4 q36 6 62 4z" fill="#2f6b2a"/>
-<path d="M606 268 q44 -30 62 -8 q-36 6 -62 8z" fill="#3a8034"/>
-<path d="M180 300 q-8 -46 -6 -66" stroke="#4a3520" stroke-width="8" fill="none"/>
-<ellipse cx="190" cy="290" rx="46" ry="26" fill="#2f6b2a"/>
-<text x="400" y="462" text-anchor="middle" font-family="Georgia,serif" font-size="26" fill="#fff" font-weight="bold">Maasai Mara, Kenya</text>
-<text x="400" y="484" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" fill="#e8f4ff">OpenAI travel recommendation demo</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" aria-label="Maasai Mara, Kenya" role="img" viewBox="0 0 800 500"><defs><linearGradient id="s" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#ffdca8"/><stop offset="100%" stop-color="#ff9d6e"/></linearGradient></defs><rect width="800" height="500" fill="url(#s)"/><circle cx="620" cy="130" r="62" fill="#fff6d5" opacity=".95"/><path fill="#5b6b52" d="M0 360 L180 210 L330 360 Z"/><path fill="#4c5c46" d="M300 360 L520 190 L740 360 Z"/><rect width="800" height="140" y="360" fill="#4a7c2f"/><path fill="none" stroke="#4a3520" stroke-width="11" d="M620 360 q-16 -70 -14 -96"/><path fill="#2f6b2a" d="M606 268 q-46 -26 -62 -4 q36 6 62 4z"/><path fill="#3a8034" d="M606 268 q44 -30 62 -8 q-36 6 -62 8z"/><path fill="none" stroke="#4a3520" stroke-width="8" d="M180 300 q-8 -46 -6 -66"/><ellipse cx="190" cy="290" fill="#2f6b2a" rx="46" ry="26"/><text x="400" y="462" fill="#fff" font-family="Georgia,serif" font-size="26" font-weight="bold" text-anchor="middle">Maasai Mara, Kenya</text><text x="400" y="484" fill="#e8f4ff" font-family="Helvetica,Arial,sans-serif" font-size="15" text-anchor="middle">OpenAI travel recommendation demo</text></svg>

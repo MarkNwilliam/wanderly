@@ -1,17 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="Kandy, Sri Lanka">
-<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1">
-<stop offset="0%" stop-color="#ffe6bd"/><stop offset="100%" stop-color="#ffa07a"/></linearGradient></defs>
-<rect width="800" height="500" fill="url(#s)"/>
-<circle cx="150" cy="110" r="48" fill="#fff3c4" opacity=".9"/>
-<rect y="430" width="800" height="70" fill="#c2703d"/>
-<rect x="180" y="300" width="440" height="130" fill="#c2703d"/>
-<rect x="230" y="345" width="120" height="85" fill="#5c2e0d"/>
-<rect x="450" y="345" width="120" height="85" fill="#5c2e0d"/>
-<path d="M150 300 L400 150 L650 300 Z" fill="#8a3a14"/>
-<path d="M255 300 L400 205 L545 300 Z" fill="#a94a17"/>
-<rect x="378" y="60" width="44" height="95" fill="#8a3a14"/>
-<circle cx="400" cy="52" r="20" fill="#ffd166"/>
-<rect x="330" y="410" width="140" height="20" fill="#7a3d10"/>
-<text x="400" y="462" text-anchor="middle" font-family="Georgia,serif" font-size="26" fill="#fff" font-weight="bold">Kandy, Sri Lanka</text>
-<text x="400" y="484" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" fill="#e8f4ff">OpenAI travel recommendation demo</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" aria-label="Kandy, Sri Lanka" role="img" viewBox="0 0 800 500"><defs><linearGradient id="s" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#ffe6bd"/><stop offset="100%" stop-color="#ffa07a"/></linearGradient></defs><rect width="800" height="500" fill="url(#s)"/><circle cx="150" cy="110" r="48" fill="#fff3c4" opacity=".9"/><rect width="800" height="70" y="430" fill="#c2703d"/><rect width="440" height="130" x="180" y="300" fill="#c2703d"/><rect width="120" height="85" x="230" y="345" fill="#5c2e0d"/><rect width="120" height="85" x="450" y="345" fill="#5c2e0d"/><path fill="#8a3a14" d="M150 300 L400 150 L650 300 Z"/><path fill="#a94a17" d="M255 300 L400 205 L545 300 Z"/><rect width="44" height="95" x="378" y="60" fill="#8a3a14"/><circle cx="400" cy="52" r="20" fill="#ffd166"/><rect width="140" height="20" x="330" y="410" fill="#7a3d10"/><text x="400" y="462" fill="#fff" font-family="Georgia,serif" font-size="26" font-weight="bold" text-anchor="middle">Kandy, Sri Lanka</text><text x="400" y="484" fill="#e8f4ff" font-family="Helvetica,Arial,sans-serif" font-size="15" text-anchor="middle">OpenAI travel recommendation demo</text></svg>
