@@ -34,6 +34,15 @@ img{ max-width:100%; display:block; }
 
 /* ---------------- Navigation bar ---------------- */
 
+/* The sticky element must be the <header>, not the <nav> inside it. A sticky
+   child is constrained to its parent's box, and the header is only as tall as
+   the nav, so position:sticky on .navbar never actually pinned anything. */
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
 .navbar{
   display:flex;
   align-items:center;
@@ -43,9 +52,6 @@ img{ max-width:100%; display:block; }
   padding:0.85rem 1.25rem;
   background:var(--sea-dark);
   border-bottom:4px solid var(--sun);
-  position:sticky;
-  top:0;
-  z-index:100;
 }
 
 .brand{
