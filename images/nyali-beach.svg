@@ -1,16 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="Nyali Beach, Mombasa">
-<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1">
-<stop offset="0%" stop-color="#ffe3b0"/><stop offset="100%" stop-color="#ffb4a2"/></linearGradient></defs>
-<rect width="800" height="500" fill="url(#s)"/>
-<circle cx="640" cy="120" r="58" fill="#ffd166" opacity=".95"/>
-<rect y="300" width="800" height="200" fill="#e6c27a"/>
-<path d="M0 300 Q200 275 400 300 T800 300 L800 330 L0 330 Z" fill="#f2e2b8"/>
-<rect y="240" width="800" height="62" fill="#1f7a8c"/>
-<path d="M0 302 q60 12 120 0 t120 0 t120 0 t120 0 t120 0 t120 0" stroke="#9fdbe8" stroke-width="4" fill="none" opacity=".8"/>
-<path d="M110 300 q-26 -70 -8 -118" stroke="#6b4b2a" stroke-width="12" fill="none" stroke-linecap="round"/>
-<path d="M102 182 q-58 -34 -74 -6 q44 6 74 6z" fill="#2f7d4f"/>
-<path d="M102 182 q56 -38 76 -10 q-46 8 -76 10z" fill="#37955d"/>
-<path d="M102 182 q6 -54 42 -62 q4 40 -42 62z" fill="#2b6f47"/>
-<text x="400" y="462" text-anchor="middle" font-family="Georgia,serif" font-size="26" fill="#fff" font-weight="bold">Nyali Beach, Mombasa</text>
-<text x="400" y="484" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" fill="#e8f4ff">OpenAI travel recommendation demo</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" aria-label="Nyali Beach, Mombasa" role="img" viewBox="0 0 800 500"><defs><linearGradient id="s" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#ffe3b0"/><stop offset="100%" stop-color="#ffb4a2"/></linearGradient></defs><rect width="800" height="500" fill="url(#s)"/><circle cx="640" cy="120" r="58" fill="#ffd166" opacity=".95"/><rect width="800" height="200" y="300" fill="#e6c27a"/><path fill="#f2e2b8" d="M0 300 Q200 275 400 300 T800 300 L800 330 L0 330 Z"/><rect width="800" height="62" y="240" fill="#1f7a8c"/><path fill="none" stroke="#9fdbe8" stroke-width="4" d="M0 302 q60 12 120 0 t120 0 t120 0 t120 0 t120 0 t120 0" opacity=".8"/><path fill="none" stroke="#6b4b2a" stroke-linecap="round" stroke-width="12" d="M110 300 q-26 -70 -8 -118"/><path fill="#2f7d4f" d="M102 182 q-58 -34 -74 -6 q44 6 74 6z"/><path fill="#37955d" d="M102 182 q56 -38 76 -10 q-46 8 -76 10z"/><path fill="#2b6f47" d="M102 182 q6 -54 42 -62 q4 40 -42 62z"/><text x="400" y="462" fill="#fff" font-family="Georgia,serif" font-size="26" font-weight="bold" text-anchor="middle">Nyali Beach, Mombasa</text><text x="400" y="484" fill="#e8f4ff" font-family="Helvetica,Arial,sans-serif" font-size="15" text-anchor="middle">OpenAI travel recommendation demo</text></svg>
