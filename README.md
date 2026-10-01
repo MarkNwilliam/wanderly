@@ -40,6 +40,11 @@ showing both temple recommendations with their images.
 
 [Open it here](screenshots/task7-search-temple.png)
 
+`screenshots/task8-search-country.png` — searching for "country" shows recommendations
+for at least two different countries with images (Uganda and Kenya in this example).
+
+[Open it here](screenshots/task8-search-country.png)
+
 ## Layout
 
 ```
