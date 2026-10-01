@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="Bali, Indonesia">
+<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#ffe0f0"/><stop offset="100%" stop-color="#ffb3c6"/></linearGradient></defs>
+<rect width="800" height="500" fill="url(#s)"/>
+<rect y="360" width="800" height="140" fill="#7a4b2a"/>
+<circle cx="400" cy="300" r="120" fill="#c1442e"/>
+<circle cx="400" cy="300" r="58" fill="#f2e2b8"/>
+<g fill="#f2c14e">
+<path d="M400 170 l26 46 l-26 -14 l-26 14 Z"/>
+<path d="M400 430 l26 -46 l-26 14 l-26 -14 Z"/>
+<path d="M270 300 l46 26 l-14 -26 l14 -26 Z"/>
+<path d="M530 300 l-46 26 l14 -26 l-14 -26 Z"/></g>
+<g fill="#8a5a2b"><rect x="120" y="150" width="70" height="210" rx="34"/>
+<rect x="610" y="150" width="70" height="210" rx="34"/></g>
+<g fill="#f2e2b8"><circle cx="155" cy="200" r="10"/><circle cx="155" cy="250" r="10"/><circle cx="155" cy="300" r="10"/>
+<circle cx="645" cy="200" r="10"/><circle cx="645" cy="250" r="10"/><circle cx="645" cy="300" r="10"/></g>
+<text x="400" y="462" text-anchor="middle" font-family="Georgia,serif" font-size="26" fill="#fff" font-weight="bold">Bali, Indonesia</text>
+<text x="400" y="484" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" fill="#e8f4ff">OpenAI travel recommendation demo</text>
+</svg>

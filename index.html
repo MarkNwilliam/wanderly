@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wanderly — Find your next destination</title>
+<meta name="description" content="Wanderly recommends beaches, temples and country escapes based on the preferences you choose.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar" aria-label="Main navigation">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">✈</span> Wanderly
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" data-page="home">Home</a></li>
+      <li><a href="index.html#beaches" data-page="beaches">Beaches</a></li>
+      <li><a href="index.html#temples" data-page="temples">Temples</a></li>
+      <li><a href="index.html#by-country" data-page="country">By Country</a></li>
+      <li><a href="about.html" data-page="about">About Us</a></li>
+      <li><a href="contact.html" data-page="contact">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- INTRO -->
+  <section class="intro" id="intro">
+    <h1>Stop guessing where to go.</h1>
+    <p class="lead">
+      Wanderly is a travel recommendation site. Tell us what you enjoy — beaches,
+      temples, wildlife, city life — and we will suggest a destination and show you
+      what it actually looks like before you spend a cent on flights.
+    </p>
+    <p>
+      Every recommendation below is built around one idea: you should not choose a
+      destination from a brochure alone. We show pictures, the reasons to go, the
+      best time to travel, and an honest note about what is difficult about the
+      trip. Nothing is hidden to make it look better than it is.
+    </p>
+    <a class="btn" href="#finder">Show me where to go</a>
+  </section>
+
+  <!-- PREFERENCE FINDER -->
+  <section class="finder" id="finder">
+    <h2>Find my destination</h2>
+    <p>Choose what you enjoy most. Your answer filters the recommendations below and highlights the best match.</p>
+
+    <div class="choices" role="group" aria-label="Choose your travel preference">
+      <button class="choice is-active" data-pref="beach">🏖️ Beaches &amp; coast</button>
+      <button class="choice" data-pref="temple">🛕 Temples &amp; heritage</button>
+      <button class="choice" data-pref="wildlife">🦁 Wildlife &amp; nature</button>
+      <button class="choice" data-pref="city">🌆 Cities &amp; food</button>
+    </div>
+
+    <div class="finder-result" id="finderResult" aria-live="polite"></div>
+  </section>
+
+  <!-- BEACHES -->
+  <section class="cards" id="beaches">
+    <h2>Beach recommendations</h2>
+    <p class="section-intro">Two coastlines worth the flight, and an honest look at each.</p>
+
+    <article class="card" data-category="beach">
+      <img src="images/nyali-beach.svg" alt="Illustration of Nyali Beach in Mombasa, with a sun over the sea and a palm tree">
+      <div class="card-body">
+        <h3>Nyali Beach, Mombasa — Kenya</h3>
+        <p>Wide, soft sand and water that stays warm most of the year. Nyali is the
+           closest proper beach to Kampala — about 400 km, roughly six hours by road.</p>
+        <ul>
+          <li><strong>Best for:</strong> families, first-time visitors, long relaxed days</li>
+          <li><strong>Best time:</strong> December to March and June to October</li>
+          <li><strong>Honest note:</strong> the reef means strong currents at some beaches — ask locally which day is safe</li>
+        </ul>
+        <button class="expand" type="button" data-more="Nyali has a marine park just offshore, so the snorkelling is the reason to come rather than the sand. Dhow trips run out at low tide, and the food is a serious reason not to skip lunch.">Read more</button>
+        <p class="more" hidden>Nyali has a marine park just offshore, so the snorkelling is the reason to come rather than the sand. Dhow trips run out at low tide, and the food is a serious reason not to skip lunch.</p>
+      </div>
+    </article>
+
+    <article class="card" data-category="beach">
+      <img src="images/nungwi-beach.svg" alt="Illustration of Nungwi Beach in Zanzibar, with a sun over turquoise sea and a palm tree">
+      <div class="card-body">
+        <h3>Nungwi Beach, Zanzibar — Tanzania</h3>
+        <p>Turquoise water, a long shallow reef, and sunsets that pull a crowd.
+           Nungwi is the beach most people picture when they hear "Zanzibar".</p>
+        <ul>
+          <li><strong>Best for:</strong> couples, photographers, calm shallow swimming</li>
+          <li><strong>Best time:</strong> June to October and December to February</li>
+          <li><strong>Honest note:</strong> Nungwi gets busy. For quiet, Kizimkazi or Paje are better and cheaper</li>
+        </ul>
+        <button class="expand" type="button" data-more="Zanzibar is a short hop from the Kenyan coast, so many travellers combine the two trips. Stone Town is worth a full day — the old fort, the spice markets and the dhow builders' quarter are all free to walk.">Read more</button>
+        <p class="more" hidden>Zanzibar is a short hop from the Kenyan coast, so many travellers combine the two trips. Stone Town is worth a full day — the old fort, the spice markets and the dhow builders' quarter are all free to walk.</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- TEMPLES -->
+  <section class="cards" id="temples">
+    <h2>Temple recommendations</h2>
+    <p class="section-intro">Two places of worship worth planning a whole trip around.</p>
+
+    <article class="card" data-category="temple">
+      <img src="images/kandy-tooth.svg" alt="Illustration of the Temple of the Tooth in Kandy, Sri Lanka, with tiered roofs and a golden finial">
+      <div class="card-body">
+        <h3>Temple of the Tooth, Kandy — Sri Lanka</h3>
+        <p>Sri Lanka's most sacred Buddhist temple, set beside an artificial lake
+           with the city hills behind it. It is still an active place of worship,
+           not a museum.</p>
+        <ul>
+          <li><strong>Best for:</strong> heritage, photography, anyone curious about Buddhist practice</li>
+          <li><strong>Best time:</strong> December to March</li>
+          <li><strong>Honest note:</strong> shoulders and knees must be covered, shoes come off at the gate, and the Esala procession in July/August makes Kandy extremely crowded</li>
+        </ul>
+        <button class="expand" type="button" data-more="The Temple of the Tooth holds what Buddhists believe to be the Buddha's left canine tooth, and it is guarded without interruption. Go early in the morning: the rituals are most active then and the crowd is thinner.">Read more</button>
+        <p class="more" hidden>The Temple of the Tooth holds what Buddhists believe to be the Buddha's left canine tooth, and it is guarded without interruption. Go early in the morning: the rituals are most active then and the crowd is thinner.</p>
+      </div>
+    </article>
+
+    <article class="card" data-category="temple">
+      <img src="images/prambanan.svg" alt="Illustration of Prambanan Temple in Yogyakarta, Indonesia, with carved stone towers">
+      <div class="card-body">
+        <h3>Prambanan, Yogyakarta — Indonesia</h3>
+        <p>The largest Hindu temple complex in Java, built in the 9th century from
+           volcanic stone and still standing after earthquakes and centuries of weather.</p>
+        <ul>
+          <li><strong>Best for:</strong> architecture fans, history, combining with Borobudur</li>
+          <li><strong>Best time:</strong> May to September (dry season)</li>
+          <li><strong>Honest note:</strong> many reliefs have been worn smooth by visitors and are being conserved, so some detail you see in old photographs is no longer sharp</li>
+        </ul>
+        <button class="expand" type="button" data-more="Prambanan sits about an hour from Yogyakarta and Borobudur, the world's largest Buddhist temple, is nearby. Buying a combined ticket for both is cheaper and lets you take your time across two days.">Read more</button>
+        <p class="more" hidden>Prambanan sits about an hour from Yogyakarta and Borobudur, the world's largest Buddhist temple, is nearby. Buying a combined ticket for both is cheaper and lets you take your time across two days.</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- BY COUNTRY -->
+  <section class="bycountry" id="by-country">
+    <h2>Recommendation by country</h2>
+    <p class="section-intro">Pick a country. We show two places worth the trip and why.</p>
+
+    <div class="select-row">
+      <label for="countrySelect">Choose a country:</label>
+      <select id="countrySelect">
+        <option value="">— Select a country —</option>
+        <option value="uganda">Uganda</option>
+        <option value="kenya">Kenya</option>
+        <option value="tanzania">Tanzania</option>
+        <option value="rwanda">Rwanda</option>
+        <option value="srilanka">Sri Lanka</option>
+        <option value="indonesia">Indonesia</option>
+      </select>
+    </div>
+
+    <div class="country-result" id="countryResult" aria-live="polite">
+      <p class="placeholder">Choose a country above to see its top two destinations.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p><strong>Wanderly</strong> — a JavaScript travel recommendation project.</p>
+  <p>
+    <a href="index.html">Home</a> ·
+    <a href="about.html">About Us</a> ·
+    <a href="contact.html">Contact Us</a>
+  </p>
+  <p class="small">Images are original vector illustrations made for this project.</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

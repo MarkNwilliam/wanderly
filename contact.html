@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — Wanderly</title>
+<meta name="description" content="Send Wanderly a correction, a suggestion, or a question about a destination.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar" aria-label="Main navigation">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">✈</span> Wanderly
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" data-page="home">Home</a></li>
+      <li><a href="index.html#beaches" data-page="beaches">Beaches</a></li>
+      <li><a href="index.html#temples" data-page="temples">Temples</a></li>
+      <li><a href="index.html#by-country" data-page="country">By Country</a></li>
+      <li><a href="about.html" data-page="about">About Us</a></li>
+      <li><a href="contact.html" data-page="contact">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section class="page-head">
+    <h1>Contact Us</h1>
+    <p>Corrections, suggestions and questions are all welcome. Tell us what is wrong and we
+       will fix it — travel information goes stale, and we would rather hear about it.</p>
+  </section>
+
+  <section class="contact-wrap">
+
+    <div class="contact-form-area">
+
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+
+      <form id="contactForm" novalidate>
+        <div class="field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" placeholder="e.g. Mark Nkugwa" autocomplete="name">
+          <span class="error" id="nameError"></span>
+        </div>
+
+        <div class="field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+          <span class="error" id="emailError"></span>
+        </div>
+
+        <div class="field">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject">
+            <option value="">— Please choose —</option>
+            <option value="correction">A correction to something on the site</option>
+            <option value="suggestion">Suggest a destination</option>
+            <option value="question">A question</option>
+            <option value="other">Something else</option>
+          </select>
+          <span class="error" id="subjectError"></span>
+        </div>
+
+        <div class="field">
+          <label for="message">Your message</label>
+          <textarea id="message" name="message" rows="7" placeholder="Tell us what you found, or what we got wrong."></textarea>
+          <span class="error" id="messageError"></span>
+        </div>
+
+        <button type="submit" class="btn">Send message</button>
+        <button type="reset" class="btn btn-ghost" id="resetBtn">Clear form</button>
+      </form>
+
+      <p class="form-note">
+        JavaScript checks your name, email, subject and message before the message is
+        allowed through, and tells you which field needs attention.
+      </p>
+    </div>
+
+    <aside class="contact-side">
+      <h2>Other ways to reach us</h2>
+      <p><strong>Email</strong><br>
+        <a href="mailto:hello@wanderly.example">hello@wanderly.example</a>
+      </p>
+      <p><strong>Response time</strong><br>
+        We aim to reply within three working days.</p>
+      <p><strong>Please include</strong></p>
+      <ul>
+        <li>The page the information is on</li>
+        <li>What we said</li>
+        <li>What you found instead</li>
+        <li>When you checked</li>
+      </ul>
+      <p class="small">Wanderly is a student project. The email address is illustrative and
+         not monitored continuously.</p>
+    </aside>
+
+  </section>
+
+</main>
+
+<footer>
+  <p><strong>Wanderly</strong> — a JavaScript travel recommendation project.</p>
+  <p>
+    <a href="index.html">Home</a> ·
+    <a href="about.html">About Us</a> ·
+    <a href="contact.html">Contact Us</a>
+  </p>
+  <p class="small">Images are original vector illustrations made for this project.</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

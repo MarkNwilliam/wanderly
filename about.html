@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Wanderly</title>
+<meta name="description" content="Who builds Wanderly, what we recommend and why, and how the site works.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar" aria-label="Main navigation">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">✈</span> Wanderly
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" data-page="home">Home</a></li>
+      <li><a href="index.html#beaches" data-page="beaches">Beaches</a></li>
+      <li><a href="index.html#temples" data-page="temples">Temples</a></li>
+      <li><a href="index.html#by-country" data-page="country">By Country</a></li>
+      <li><a href="about.html" data-page="about">About Us</a></li>
+      <li><a href="contact.html" data-page="contact">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section class="page-head">
+    <h1>About Us</h1>
+    <p>Wanderly is a small travel recommendation site built to answer one question honestly:
+       given how you like to travel, where should you actually go?</p>
+  </section>
+
+  <section class="prose">
+
+    <h2>Who we are</h2>
+    <div class="about-grid">
+      <img src="images/kenya-maasai.svg" alt="Illustration of an open savanna landscape at sunrise">
+      <div>
+        <p>Wanderly is a student-built project. There is no company behind it and no booking
+           engine — you will not be sold anything, and the site takes no payment details.</p>
+        <p>What we do have is time and a stubbornness about accuracy. Every destination on
+           this site was chosen because it is genuinely worth travelling for, and every one
+           of them carries an <strong>honest note</strong>: the crowd size, the season to
+           avoid, the currents, the worn carvings. Travel websites usually leave that out.</p>
+      </div>
+    </div>
+
+    <h2>What we recommend on</h2>
+    <ul class="criteria">
+      <li><strong>Worth the journey.</strong> If a place is only a good idea if you already
+          live nearby, we do not list it.</li>
+      <li><strong>Reachable from East Africa.</strong> Flights from Entebbe and Nairobi
+          matter more than worldwide fame.</li>
+      <li><strong>Honest conditions.</strong> Every entry states what is difficult, not
+          only what is beautiful.</li>
+      <li><strong>Respect for local custom.</strong> Temple entries state the dress code and
+          visiting etiquette up front.</li>
+    </ul>
+
+    <h2>How the site works</h2>
+    <p>Wanderly is built with plain HTML, CSS and JavaScript — no framework and no build
+       step, so it loads quickly and you can read exactly how it does what it does.</p>
+    <ol class="steps">
+      <li><strong>Pick a preference.</strong> Beaches, temples, wildlife or cities. This
+          highlights your best matches and updates the recommendation panel.</li>
+      <li><strong>Browse the categories.</strong> Each card has two images, when to go, who
+          it suits, and the honest note. <em>Read more</em> expands further detail without
+          leaving the page.</li>
+      <li><strong>Choose a country.</strong> The country selector uses JavaScript to replace
+          the results on the same page — no reload, no new tab.</li>
+      <li><strong>Send a message.</strong> The contact form checks what you typed before it
+          lets you send, so you do not lose a long message to a typo.</li>
+    </ol>
+
+    <h2>Technologies used</h2>
+    <table class="tech-table">
+      <tr><th>HTML5</th><td>Semantic page structure, accessibility labels, and one page per section</td></tr>
+      <tr><th>CSS3</th><td>Flexbox and grid layout, responsive down to a phone screen</td></tr>
+      <tr><th>JavaScript</th><td>Navigation state, preference filtering, country selector, expand/collapse, form validation</td></tr>
+      <tr><th>SVG</th><td>All 16 images are original vector illustrations drawn for this project</td></tr>
+    </table>
+
+    <h2>Corrections and suggestions</h2>
+    <p>If something on this site is wrong — a road is closed, a temple has changed its
+       visiting rules, a beach has had a building put in front of it — we want to know.
+       That is what the <a href="contact.html">contact page</a> is for.</p>
+
+    <a class="btn" href="index.html">Back to recommendations</a>
+  </section>
+
+</main>
+
+<footer>
+  <p><strong>Wanderly</strong> — a JavaScript travel recommendation project.</p>
+  <p>
+    <a href="index.html">Home</a> ·
+    <a href="about.html">About Us</a> ·
+    <a href="contact.html">Contact Us</a>
+  </p>
+  <p class="small">Images are original vector illustrations made for this project.</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
