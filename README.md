@@ -28,6 +28,13 @@ Plain HTML5, CSS3 and JavaScript. No framework, no build step, no dependencies.
 All 16 images are original SVG vector illustrations drawn for this project, so the
 site renders identically offline and no image can fail to load.
 
+## Screenshots
+
+`screenshots/task6-search-beach.png` — the search bar with "beach" typed in,
+the confirmation banner, and both beach recommendations with their images.
+
+[Open it here](screenshots/task6-search-beach.png)
+
 ## Layout
 
 ```
@@ -35,6 +42,7 @@ index.html   about.html   contact.html
 css/styles.css
 js/main.js
 images/   16 SVG illustrations
+screenshots/   evidence screenshots
 ```
 
 ## Run locally
