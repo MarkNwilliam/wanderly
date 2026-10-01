@@ -144,6 +144,8 @@
       c.classList.remove("dimmed");
     });
 
+    hideCountryResults();
+
     var box = document.getElementById("searchStatus");
     if (box) {
       box.className = "search-status";
@@ -152,6 +154,89 @@
 
     // Put the preference panel back to its default state.
     applyPreference("beach");
+  }
+
+  // Country names and the places people actually type for each of them.
+  var COUNTRY_ALIASES = {
+    uganda: ["uganda", "kampala", "jinja", "nile"],
+    kenya: ["kenya", "mombasa", "maasai", "mara", "nairobi"],
+    tanzania: ["tanzania", "zanzibar", "kilimanjaro", "serengeti"],
+    rwanda: ["rwanda", "kigali", "volcanoes", "gorilla"],
+    srilanka: ["srilanka", "kandy", "yala"],
+    indonesia: ["indonesia", "bali", "yogyakarta", "java", "prambanan"]
+  };
+
+  // The bare word "country" means "show me country recommendations", not
+  // "find a card containing the letters c-o-u-n-t-r-y".
+  var COUNTRY_KEYWORDS = ["country", "countries", "by country", "country recommendation", "countries recommendation"];
+
+  function hideCountryResults() {
+    var section = document.getElementById("search-country-section");
+    if (section) section.hidden = true;
+  }
+
+  function showCountryResults(keys, intro) {
+    var section = document.getElementById("search-country-section");
+    var grid = document.getElementById("searchCountryResults");
+    var introEl = document.getElementById("searchCountryIntro");
+    if (!section || !grid) return 0;
+
+    var html = "";
+    keys.forEach(function (k) {
+      var c = COUNTRIES[k];
+      if (!c) return;
+      c.places.forEach(function (place) {
+        html +=
+          '<article class="card">' +
+            '<img src="' + place.img + '" alt="Illustration of ' + place.title.replace(/&amp;/g, "and") + '">' +
+            '<div class="card-body">' +
+              '<p class="country-tag">' + c.name + "</p>" +
+              "<h3>" + place.title + "</h3>" +
+              "<p>" + place.note + "</p>" +
+            "</div>" +
+          "</article>";
+      });
+    });
+
+    grid.innerHTML = html;
+    if (introEl) introEl.textContent = intro;
+    section.hidden = false;
+    return keys.length;
+  }
+
+  function searchCountries(q) {
+    if (typeof COUNTRIES === "undefined") return null; // not defined yet
+
+    var keys = Object.keys(COUNTRIES).filter(function (k) {
+      var names = COUNTRY_ALIASES[k] || [];
+      var cname = COUNTRIES[k].name.toLowerCase();
+      return names.some(function (n) { return n === q || n.indexOf(q) > -1; });
+    });
+
+    if (keys.length) {
+      showCountryResults(
+        keys,
+        keys.length === 1
+          ? "Showing all destinations in " + COUNTRIES[keys[0]].name + "."
+          : "Showing destinations in " + keys.map(function (k) { return COUNTRIES[k].name; }).join(", ") + "."
+      );
+      return keys;
+    }
+
+    if (COUNTRY_KEYWORDS.indexOf(q) > -1) {
+      // Two countries at minimum, so the search always demonstrates itself.
+      var featured = Object.keys(COUNTRIES).slice(0, 2);
+      showCountryResults(
+        featured,
+        "Showing two of the six countries we cover — " +
+        featured.map(function (k) { return COUNTRIES[k].name; }).join(" and ") +
+        ". Pick any of the six from the By Country selector."
+      );
+      return featured;
+    }
+
+    hideCountryResults();
+    return null;
   }
 
   function runSearch(term) {
@@ -178,7 +263,24 @@
       if (match) hits++;
     });
 
-    // Searching overrides the preference filter for as long as it is active.
+    var countryKeys = searchCountries(q);
+
+    if (countryKeys && countryKeys.length) {
+      // Country matches take priority: dim the beach/temple cards so the
+      // country results are unambiguous.
+      cards.forEach(function (c) { c.classList.add("dimmed"); });
+
+      var names = countryKeys.map(function (k) { return COUNTRIES[k].name; });
+      box.className = "search-status show";
+      box.textContent =
+        names.length === 1
+          ? "Showing destinations in " + names[0] + "."
+          : "Showing destinations in " + names.join(" and ") + ".";
+      return;
+    }
+
+    hideCountryResults();
+
     if (hits > 0) {
       box.className = "search-status show";
       box.textContent =
@@ -187,7 +289,7 @@
     } else {
       box.className = "search-status show none";
       box.textContent =
-        "Nothing matches “" + term.trim() + "”. Try a country (Kenya, Zanzibar, " +
+        "Nothing matches “" + term.trim() + "”. Try a country (Kenya, Uganda, Zanzibar, " +
         "Sri Lanka) or a type of place (beach, temple, coast).";
     }
   }
@@ -205,20 +307,6 @@
       }
       runSearch(term);
     });
-  }
-
-  // Landing back from another page: run the carried query.
-  (function applyCarriedQuery() {
-    var m = window.location.search.match(/[?&]q=([^&]*)/);
-    if (!m) return;
-    var term = decodeURIComponent(m[1].replace(/\+/g, " "));
-    if (!term) return;
-    if (searchInput) searchInput.value = term;
-    runSearch(term);
-  })();
-
-  if (clearBtn) {
-    clearBtn.addEventListener("click", clearSearchNow);
   }
 
   /* ---------------- 4. COUNTRY SELECTOR ---------------- */
@@ -519,4 +607,18 @@
       });
     }
   }
+  // Landing back from another page: run the carried query.
+  (function applyCarriedQuery() {
+    var m = window.location.search.match(/[?&]q=([^&]*)/);
+    if (!m) return;
+    var term = decodeURIComponent(m[1].replace(/\+/g, " "));
+    if (!term) return;
+    if (searchInput) searchInput.value = term;
+    runSearch(term);
+  })();
+
+  if (clearBtn) {
+    clearBtn.addEventListener("click", clearSearchNow);
+  }
+
 })();
