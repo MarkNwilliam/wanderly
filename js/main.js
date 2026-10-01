@@ -118,7 +118,110 @@
 
   applyPreference("beach");
 
-  /* ---------------- 3. COUNTRY SELECTOR ---------------- */
+  /* ---------------- 3. NAVBAR SEARCH (Search / Clear) ---------------- */
+
+  var searchForm = document.getElementById("navSearch");
+  var searchInput = document.getElementById("siteSearch");
+  var clearBtn = document.getElementById("clearSearch");
+
+  // Banner that reports how many destinations matched.
+  function searchStatusBox() {
+    var box = document.getElementById("searchStatus");
+    if (!box && document.getElementById("intro")) {
+      box = document.createElement("div");
+      box.id = "searchStatus";
+      box.className = "search-status";
+      box.setAttribute("role", "status");
+      document.getElementById("intro").appendChild(box);
+    }
+    return box;
+  }
+
+  function clearSearchNow() {
+    if (searchInput) searchInput.value = "";
+
+    document.querySelectorAll(".card[data-category]").forEach(function (c) {
+      c.classList.remove("dimmed");
+    });
+
+    var box = document.getElementById("searchStatus");
+    if (box) {
+      box.className = "search-status";
+      box.textContent = "";
+    }
+
+    // Put the preference panel back to its default state.
+    applyPreference("beach");
+  }
+
+  function runSearch(term) {
+    var box = searchStatusBox();
+    if (!box) return;
+
+    var q = term.trim().toLowerCase();
+
+    if (!q) {
+      clearSearchNow();
+      return;
+    }
+
+    var cards = document.querySelectorAll(".card[data-category]");
+    var hits = 0;
+
+    cards.forEach(function (card) {
+      var title = card.querySelector("h3");
+      var text = card.textContent.toLowerCase();
+      var match = (title ? title.textContent.toLowerCase().indexOf(q) > -1 : false) ||
+                  text.indexOf(q) > -1;
+
+      card.classList.toggle("dimmed", !match);
+      if (match) hits++;
+    });
+
+    // Searching overrides the preference filter for as long as it is active.
+    if (hits > 0) {
+      box.className = "search-status show";
+      box.textContent =
+        hits + (hits === 1 ? " destination matches " : " destinations match ") +
+        "“" + term.trim() + "”. Close-up view is on.";
+    } else {
+      box.className = "search-status show none";
+      box.textContent =
+        "Nothing matches “" + term.trim() + "”. Try a country (Kenya, Zanzibar, " +
+        "Sri Lanka) or a type of place (beach, temple, coast).";
+    }
+  }
+
+  if (searchForm) {
+    searchForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var term = searchInput ? searchInput.value : "";
+
+      // The recommendation cards only exist on the home page, so a search
+      // started from About or Contact is carried over to it.
+      if (!document.querySelector(".card[data-category]")) {
+        window.location.href = "index.html?q=" + encodeURIComponent(term.trim());
+        return;
+      }
+      runSearch(term);
+    });
+  }
+
+  // Landing back from another page: run the carried query.
+  (function applyCarriedQuery() {
+    var m = window.location.search.match(/[?&]q=([^&]*)/);
+    if (!m) return;
+    var term = decodeURIComponent(m[1].replace(/\+/g, " "));
+    if (!term) return;
+    if (searchInput) searchInput.value = term;
+    runSearch(term);
+  })();
+
+  if (clearBtn) {
+    clearBtn.addEventListener("click", clearSearchNow);
+  }
+
+  /* ---------------- 4. COUNTRY SELECTOR ---------------- */
 
   var COUNTRIES = {
     uganda: {
@@ -289,7 +392,7 @@
     });
   }
 
-  /* ---------------- 4. EXPAND / COLLAPSE ---------------- */
+  /* ---------------- 5. EXPAND / COLLAPSE ---------------- */
 
   document.querySelectorAll(".expand").forEach(function (btn) {
     var target = document.getElementById(btn.dataset.more);
@@ -321,7 +424,7 @@
     });
   });
 
-  /* ---------------- 5. CONTACT FORM ---------------- */
+  /* ---------------- 6. CONTACT FORM ---------------- */
 
   var form = document.getElementById("contactForm");
 

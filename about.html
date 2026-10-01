@@ -19,6 +19,13 @@
       <span></span><span></span><span></span>
     </button>
 
+    <form class="nav-search" id="navSearch" role="search" aria-label="Search destinations">
+      <label class="visually-hidden" for="siteSearch">Search destinations</label>
+      <input type="search" id="siteSearch" name="q" placeholder="Search destinations&hellip;" autocomplete="off">
+      <button type="submit" class="nav-btn" id="searchBtn">Search</button>
+      <button type="button" class="nav-btn nav-btn-ghost" id="clearSearch">Clear</button>
+    </form>
+
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html" data-page="home">Home</a></li>
       <li><a href="index.html#beaches" data-page="beaches">Beaches</a></li>
@@ -112,7 +119,7 @@
       <tr><th>about.html</th><td>This page</td></tr>
       <tr><th>contact.html</th><td>The contact form</td></tr>
       <tr><th>css/styles.css</th><td>All styling. Colours and spacing use the variables at the top of the file</td></tr>
-      <tr><th>js/main.js</th><td>All behaviour, in five clearly labelled sections</td></tr>
+      <tr><th>js/main.js</th><td>All behaviour, in six clearly labelled sections</td></tr>
       <tr><th>images/</th><td>16 SVG illustrations, named after the destination</td></tr>
     </table>
 
@@ -150,7 +157,8 @@
       <li><strong>No external images.</strong> Everything is a local SVG so the site
           cannot break on someone else's network.</li>
       <li><strong>Keep the navigation identical on all three pages.</strong> If you
-          add a link, add it everywhere.</li>
+          add a link, add it everywhere. The search bar belongs in the nav too, and
+          must keep its input, Search button and Clear button.</li>
       <li><strong>Every image needs alt text</strong> that describes the picture,
           not the file name.</li>
       <li><strong>Mark up semantically</strong> — one <code>&lt;h1&gt;</code> per page,

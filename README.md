@@ -9,13 +9,13 @@ wildlife, cities — and the site suggests destinations and shows what they look
 
 | Page | File | Contents |
 |---|---|---|
-| Home | `index.html` | Introduction, preference finder, beach recommendations, temple recommendations, country selector |
+| Home | `index.html` | Introduction, preference finder, search, beach recommendations, temple recommendations, country selector |
 | About Us | `about.html` | Who we are, what we recommend on, how the site works, technologies used |
 | Contact Us | `contact.html` | Validated email form, other ways to reach us |
 
 ## JavaScript features (`js/main.js`)
 
-1. **Navigation** — highlights the current page, mobile hamburger menu that closes on selection.
+1. **Navigation** — highlights the current page, mobile hamburger menu that closes on selection, and a search bar with **Search** and **Clear** buttons that filter the destination cards.
 2. **Preference finder** — four preference buttons; non-matching cards dim and a written recommendation panel updates.
 3. **Expand / collapse** — every "Read more" button reveals extra detail in place.
 4. **Country selector** — six countries, each returning two destinations with images, rendered without a page reload.
